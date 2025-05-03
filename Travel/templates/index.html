@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhramorika</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- <body> -->
+        <section class="navbar">
+            <div class="logo" style="font-size: 80px;">Bhramorika</div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </section>
+    
+        <div class="main-content">
+            <h1 style="font-family: Poppins;">Welcome...</h1>
+            <h2 style="margin-top: 20px; font-family: Poppins;">Embark on an unforgettable adventure and uncover stunning destinations with Bhramorika.</h2>
+            <h2 style="font-family: Poppins;">Your gateway to beauty and discovery!</h2>
+            
+        </div>
+    <!-- Image -->
+    <!-- <img src="{{ url_for('static', filename='kolkata.jpg') }}" alt="kolkata" class="main-image"> -->
+<!-- </body>
+<body> -->
+    <!--========BANNER=================-->
+<section class="banner">
+    <div class="banner-text-item">
+        <div class="Banner-headings">
+            <h1 style="color: rgb(238, 235, 235);">Find Your Next Trip</h1>
+        </div>
+        <form class="form">
+            <input type="text" list="mylist" placeholder="Where would you like to go?">
+            <datalist id="mylist">
+                {% for place in place_names %}
+                    <option value="{{ place }}">
+                {% endfor %}
+            </datalist>
+            <!-- <input type="date" class="date"> -->
+            <a href="#" class="search" style="color: rgb(8, 8, 8);" style="size: 80px;">Search</a>
+        </form>
+    </div>
+</section>
+
+
+            <!--============PLACES===============-->
+<section id="places" class="Places">
+    <div class="Places-text">
+        <h2>Famous Places</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Victoria.jpeg') }}" alt="Victoria Memorial">
+                    <!-- <img src="/Victoria.jpg" alt="Victoria Memorial"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Victoria Memorial</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Victoria Memorial Hall, 1, Maidan, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Princep.jpg') }}" alt="Princep Ghat">
+                    <!-- <img src="/Princep.jpg" alt="Princep Ghat"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Princep Ghat</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Strand Rd, Fort William, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Cathedral.jpg') }}" alt="St. Paul's Cathedral">
+                    <!-- <img src="/Cathedral.jpg" alt="St. Paul's Cathedral"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>St. Paul's Cathedral</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Rabindra Sadan, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='College-Street.jpg') }}" alt="College Street">
+                    <!-- <img src="/College-Street.jpg" alt="College Street"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>College Street</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">College Square, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Museum.jpg') }}" alt="Indian Museum">
+                    <!-- <img src="/Museum.jpg" alt="Indian Museum"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Indian Museum</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">27, Jawaharlal Nehru Rd, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='howrah-bridge.jpg') }}" alt="Howrah Bridge">
+                    <!-- <img src="/howrah-bridge.jpg" alt="Howrah Bridge"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Howrah Bridge</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Kolkata, West Bengal</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='mallik ghat.jpg') }}" alt="Mallik Ghat">
+                    <!-- <img src="/mallik ghat.jpg" alt="Mallik Ghat"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Mallik Ghat</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Strand Bank Rd, B.B.D. Bagh, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Birla IT Museum.jpg') }}" alt="Birla IT Museum">
+                    <!-- <img src="/Birla IT Museum.jpg" alt="Birla IT Museum"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Birla IT Museum</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Gurusaday Road, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Kalighat_Temple_Main.jpg') }}" alt="Kalighat Temple">
+                    <!-- <img src="/Kalighat_Temple_Main.jpg" alt="Kalighat Temple"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Kalighat Temple</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Kalighat, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Birla.jpg') }}" alt="Birla Planetarium">
+                    <!-- <img src="/Birla.jpg" alt="Birla Planetarium"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Birla Planetarium</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Adjacent to St. Paul's Cathedral, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Marble.jpg') }}" alt="Marble Palace">
+                    <!-- <img src="/Marble.jpg" alt="Marble Palace"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Marble Palace</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Raja Katra, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='eden.jpg') }}" alt="Eden Gardens">
+                    <!-- <img src="/eden.jpg" alt="Eden Gardens"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Eden Gardens</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Maidan, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Science city.jpg') }}" alt="Science city">
+                    <!-- <img src="/Science city.jpg" alt="Science City"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Science City</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Topsia, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='Kumartuli.jpg') }}" alt="Kumartuli">
+                    <!-- <img src="/Kumartuli.jpg" alt="Kumartuli"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Kumartuli</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Shobhabazar, Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="Zoom-img">
+                <div class="img-card">
+                    <img src="{{ url_for('static', filename='dakshineswar.jpg') }}" alt="Dakshineswar Kali Mandir">
+                    <!-- <img src="/dakshineswar.jpg" alt="Dakshineswar Kali Mandir"> -->
+                </div>
+            </div>
+            <div class="text">
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+                <h2>Dakshineswar Kali Mandir</h2>
+                <div class="card-box">
+                    <p class="time">🕓 1 Day</p>
+                    <p class="location">Greater Kolkata, West Bengal</p>
+                </div>
+            </div>
+            <p class="description" style="color: #555; font-size: 14px; margin-top: 8px; display: none;">
+                A famous riverside temple known for its serene atmosphere and iconic spiritual legacy.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- About Section -->
+<section id="about" style="background-color: #f4f4f4; padding: 80px 20px;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+      <p style="color: #888; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">
+        About Our Website
+      </p>
+      <h2 style="font-size: 36px; margin-bottom: 20px; color: #222;">
+        Your Trusted Companion for Kolkata Trips
+      </h2>
+      <p style="font-size: 18px; line-height: 1.8; color: #444; max-width: 800px; margin: 0 auto;">
+        <strong>BHRAMONIKA</strong> is your dedicated travel planning assistant, designed to offer 
+        <strong>personalized route recommendations</strong> for exploring the rich culture, history, and beauty of Kolkata. 
+        Whether you're setting off on a solo journey or planning a memorable family vacation, 
+        our intelligent platform curates routes tailored to your interests and preferences. 
+        With a focus on ease, efficiency, and enriching experiences, BHRAMONIKA helps you travel smarter 
+        and create lasting memories — one route at a time.
+      </p>
+      <h3>Thank you for exploring our website!</h3>
+      <!-- Optional Button -->
+      <!-- <a href="#" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 500;">Learn More</a> -->
+    </div>
+  </section>
+  
+
+         <!--===========Footer=================-->
+         <div id="contact" class="footer">
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Offers & Discounts</li>
+                    <li>Get Coupon</li>
+                    <li>Contact Us</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Support</h3>
+                <ul>
+                    <li>Frequently Asked Questions</li>
+                    <li>Report a Payment Issue</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+         </div>
+        
+         <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">
+            ↑ Back to top
+          </button>
+      
+    
+           <script>
+             // Show or hide back-to-top button on scroll
+             window.addEventListener("scroll", function () {
+               const btn = document.querySelector(".back-to-top");
+               if (window.scrollY > 200) {
+                 btn.style.display = "block";
+               } else {
+                 btn.style.display = "none";
+               }
+             });
+           </script>
+    
+         
+        <!-- </body> -->
+
+        <!-- JavaScript -->
+        <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    </body>
+</html>
